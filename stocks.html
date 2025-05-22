@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>assignment 2 - stocks</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assign2style.css" />
+    <link rel="stylesheet" href="buttons.css" />
+    <link rel="stylesheet" href="navigation.css" />
+
+    <!-- chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- voice command library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <!-- main and stock scripts -->
+    <script src="main.js" defer></script>
+    <script src="stocks.js" defer></script>
+  </head>
+
+  <body>
+    <!-- page header -->
+    <header class="header">
+      <h1>377 - stock tracker</h1>
+    </header>
+
+    <!-- top nav bar -->
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="stocks.html">stocks</a></li>
+        <li><a href="dogs.html">dogs</a></li>
+      </ul>
+    </nav>
+
+    <!-- main title -->
+    <h1 class="different-activities">let's chart some stocks!</h1>
+
+    <!-- stock input section -->
+    <div class="button-container">
+      <input
+        type="text"
+        id="ticker-input"
+        placeholder="enter stock ticker (e.g. AAPL)"
+        maxlength="5"
+      />
+
+      <select id="timeframe-select">
+        <option value="30">30 days</option>
+        <option value="60">60 days</option>
+        <option value="90">90 days</option>
+      </select>
+
+      <button id="lookup-btn" class="home-button">lookup stock</button>
+    </div>
+
+    <!-- chart area -->
+    <div class="chart-area">
+      <canvas id="stock-chart"></canvas>
+      <p id="chart-message">
+        enter a stock ticker and click lookup to see data.
+      </p>
+    </div>
+
+    <!-- reddit stock table -->
+    <div class="quote-container">
+      <h3>top 5 stocks on reddit</h3>
+      <table id="reddit-stocks-table">
+        <thead>
+          <tr>
+            <th>ticker</th>
+            <th>comment count</th>
+            <th>sentiment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- filled by js -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- voice command help box -->
+    <div class="audio-navigate">
+      <h2>you can control this page with your voice too!</h2>
+      <p>ensure your mic is enabled to use these commands:</p>
+      <ul>
+        <li>
+          lookup a stock:
+          <ul class="sub-bullet">
+            <li>say: lookup (stock of choice)</li>
+          </ul>
+        </li>
+        <li>
+          change background color:
+          <ul class="sub-bullet">
+            <li>say: change the color to (color)</li>
+          </ul>
+        </li>
+        <li>
+          navigate between pages:
+          <ul class="sub-bullet">
+            <li>say: navigate to home</li>
+          </ul>
+        </li>
+        <li>
+          say hello:
+          <ul class="sub-bullet">
+            <li>say: hello</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- mic buttons -->
+      <div class="audio-container">
+        <button class="audio-buttons" id="audioOn">turn on listening</button>
+        <button class="audio-buttons" id="audioOff">turn off listening</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>assignment 2 - doggos</title>
+
+    <!-- css files -->
+    <link rel="stylesheet" href="assign2style.css" />
+    <link rel="stylesheet" href="buttons.css" />
+    <link rel="stylesheet" href="navigation.css" />
+
+    <!-- main js and dog features -->
+    <script src="main.js" defer></script>
+    <script src="dogs.js" defer></script>
+
+    <!-- carousel styles and script -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/ruyadorno/simple-slider/dist/simple-slider.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/ruyadorno/simple-slider/dist/simple-slider.min.js"></script>
+
+    <!-- voice command library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  </head>
+
+  <body>
+    <!-- page header -->
+    <header class="header">
+      <h1>inst377 - doggos</h1>
+    </header>
+
+    <!-- top nav bar -->
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="stocks.html">stocks</a></li>
+        <li><a href="dogs.html">dogs</a></li>
+      </ul>
+    </nav>
+
+    <!-- main title -->
+    <h1 class="different-activities">doggos! 🐶</h1>
+
+    <!-- dog image carousel -->
+    <div>
+      <h3 style="text-align: center">dog carousel</h3>
+      <div
+        id="dogCarousel"
+        style="display: flex; justify-content: center"
+      ></div>
+    </div>
+
+    <!-- dog breed buttons -->
+    <div>
+      <h3>choose a dog breed to learn more</h3>
+      <div id="breed-buttons" class="button-container"></div>
+    </div>
+
+    <!-- breed info box (hidden at first) -->
+    <div id="breed-info" class="breed-box" style="display: none">
+      <h3 id="breed-name"></h3>
+      <p><strong>description:</strong> <span id="breed-description"></span></p>
+      <p><strong>min life span:</strong> <span id="min-life"></span> years</p>
+      <p><strong>max life span:</strong> <span id="max-life"></span> years</p>
+    </div>
+
+    <!-- voice command help box -->
+    <div class="audio-navigate">
+      <h2>use voice commands on this page</h2>
+      <p>make sure your mic is on</p>
+      <ul>
+        <li>
+          load dog breed
+          <ul class="sub-bullet">
+            <li>say: load dog breed (breed of choice listed on the page)</li>
+          </ul>
+        </li>
+        <li>
+          change the page color
+          <ul class="sub-bullet">
+            <li>say: change the color to (color of choice)</li>
+          </ul>
+        </li>
+        <li>
+          navigate to a different page
+          <ul class="sub-bullet">
+            <li>say: navigate to home</li>
+          </ul>
+        </li>
+        <li>
+          say hello
+          <ul class="sub-bullet">
+            <li>say: hello</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- mic control buttons -->
+      <div class="audio-container">
+        <button class="audio-buttons" id="audioOn">turn on listening</button>
+        <button class="audio-buttons" id="audioOff">turn off listening</button>
+      </div>
+    </div>
+  </body>
+</html>

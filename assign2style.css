@@ -1,0 +1,107 @@
+/* sets background for whole page */
+body {
+  background-color: rgb(181, 225, 255);
+  width: 100%;     
+}
+
+/* font change */
+h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* nav bar at the top */
+#main-nav {
+  background-color: rgb(189, 145, 246);
+  text-align: center;
+  width: 100%;
+  margin:0 auto;
+  padding: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* removes bullets from nav list */
+#main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* each nav item */
+#main-nav li {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* nav link style */
+#main-nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* changes nav item color when hovering */
+#main-nav li:hover {
+  background-color: rgb(145, 199, 246);
+  width: fit-content;
+  padding:5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* box for random quote */
+.quote-container{
+  background-color: rgb(255, 182, 237);
+  width:80%;
+  border: 3px solid rgb(232, 136, 226);
+  margin: 30px auto;
+  text-align: center;
+  border-radius:6px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* reddit stocks table style */
+#reddit-stocks-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  border: 2px solid #d9d9d9;
+}
+
+/* style for table cells */
+#reddit-stocks-table th,
+#reddit-stocks-table td {
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* header color for table */
+#reddit-stocks-table th {
+  background-color: rgb(255, 210, 245);
+  font-weight: bold;
+}
+
+/* makes stock sentiment icons a good size */
+#reddit-stocks-table img {
+  width: 50px;
+  height: auto;
+}
+
+/* box for dog breed info */
+.breed-box {
+  background-color: white;
+  border: 3px solid #a37de7;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

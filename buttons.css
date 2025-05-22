@@ -1,0 +1,71 @@
+/* style for the main home buttons */
+.home-button {
+  align-items: center; /* centers text vertically */
+  background-color: rgb(209, 174, 238); /* purple background */
+  border: 2px solid #fcfbfb; /* light border */
+  border-radius: 8px; /* rounded corners */
+  box-sizing: border-box;
+  color: #fafafa; /* text color */
+  cursor: pointer; /* shows pointer when hovering */
+  display: flex; /* makes it a flex box */
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px; /* button height */
+  justify-content: center; /* centers text horizontally */
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none; /* stops accidental text selecting */
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* creates that cool drop shadow effect under button */
+.home-button:after {
+  background-color: rgb(64, 0, 168); /* darker purple shadow */
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px); /* offset for shadow */
+  transition: transform .2s ease-out;
+  z-index: -1; /* sends shadow behind button */
+}
+
+/* when you hover, shadow moves into place */
+.home-button:hover:after {
+  transform: translate(0, 0);
+}
+
+/* when you click, button turns light pink */
+.home-button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+/* removes outline when hovering */
+.home-button:hover {
+  outline: 0;
+}
+
+/* wraps buttons in a row with spacing */
+.button-container {
+  display: flex;
+  justify-content: center; /* centers buttons on page */
+  gap: 20px; /* space between them */
+  margin: 20px 0;
+}
+
+/* if screen is wide enough, increase button padding */
+@media (min-width: 1000px) {
+  .home-button {
+    padding: 0 40px;
+  }
+}

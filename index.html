@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>assignment 2</title>
+
+    <!-- css files -->
+    <link rel="stylesheet" href="assign2style.css" />
+    <link rel="stylesheet" href="buttons.css" />
+    <link rel="stylesheet" href="navigation.css" />
+
+    <!-- voice command library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <!-- main js -->
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <!-- page header -->
+    <header class="header">
+      <h1>377-activities</h1>
+    </header>
+
+    <!-- top nav bar -->
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="stocks.html">stocks</a></li>
+        <li><a href="dogs.html">dogs</a></li>
+      </ul>
+    </nav>
+
+    <!-- main page title -->
+    <h1 class="different-activities">
+      there are some different activities that we can try!
+    </h1>
+
+    <!-- buttons to go to other pages -->
+    <div class="button-container">
+      <button class="home-button" onclick="location.href='stocks.html';">
+        stocks
+      </button>
+      <button class="home-button" onclick="location.href='dogs.html';">
+        dogs
+      </button>
+    </div>
+
+    <!-- quote box -->
+    <div class="quote-container">
+      <h3>quote of the page load</h3>
+      <p id="quote-text">loading...</p>
+      <p id="quote-author"></p>
+    </div>
+
+    <!-- voice command instructions -->
+    <div class="audio-navigate">
+      <h2>in this web page there are options to navigate using audio!</h2>
+      <p>ensure your mic is enabled to be able to use this feature</p>
+      <ul>
+        <li>
+          navigate to a different page
+          <ul class="sub-bullet">
+            <li>say: navigate to a different (page of your choice)</li>
+          </ul>
+        </li>
+        <li>
+          change the page color
+          <ul class="sub-bullet">
+            <li>say: change the color to (color of choice)</li>
+          </ul>
+        </li>
+        <li>
+          say hello back to you!
+          <ul class="sub-bullet">
+            <li>say: hello</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- mic control buttons -->
+      <div class="audio-container">
+        <button class="audio-buttons" id="audioOn">turn on listening</button>
+        <button class="audio-buttons" id="audioOff">turn off listening</button>
+      </div>
+    </div>
+  </body>
+</html>
